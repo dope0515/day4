@@ -18,40 +18,42 @@ $slideNum: 5;
             width: calc(100% / $slideNum);
             height: 100%;
             float: left;
-            &:nth-of-type(1){
-                background: orange;
-            }
-            &:nth-of-type(2){
-                background: aqua;
-            }
-            &:nth-of-type(3){
-                background: hotpink;
-            }
-            &:nth-of-type(4){
-                background: lightgreen;
-            }
-            &:nth-of-type(5){
-                background: violet;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            @for $i from 1 through 5 {
+                &:nth-of-type(#{$i}){
+                    background-image: url(../img/pic#{$i}.jpg);
+                }
             }
         }
     }
     //슬라이드 버튼
     .btns {
+        width: 90%;
+        height: 40px;
         position: absolute;
-        bottom: 30px;
-        left: 30px;
+        bottom: 50px;
+        left: 5%;
         display: flex;
         align-items: center;
         gap: 20px;
+        perspective: 800px;
         li {
-            width: 20px;
-            height: 20px;
-            background-color: #fff;
+            width: 18%;
+            height: 100%;
+            border: 1px solid #222;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer ;
             transition: 0.5s all;
             &.on {
-                width: 70px;
-                background-color: #111;
+                background-color: #222;
+                color: #fff;
+                transform: rotateY(360deg);
             }
         }
     }

@@ -1,7 +1,7 @@
 const slider = document.querySelector('#slider');//슬라이더
 const panel =  document.querySelector('.panel');//패널
 const btns = slider.querySelectorAll('.btns li');//버튼들
-const speed = 500;
+const speed = 1000;
 let preventEvent = false;
 
 btns.forEach((btn,idx)=>{
