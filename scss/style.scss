@@ -3,10 +3,9 @@
 $slideNum: 5;
 
 #slider {
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    height: 100vh;
     border: 1px solid #000;
-    margin: 100px auto;
     position: relative;
     overflow: hidden;
     //부모요소 크기 대비 슬라이더 넓이값 설정 공식 (퍼센트)
